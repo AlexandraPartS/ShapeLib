@@ -9,8 +9,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-bin
-obj
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -440,5 +438,9 @@ $RECYCLE.BIN/
 !vsoc.pfx
 
 # Ignore any files in /bin and /obj Folders
+*.obj
+*.bin
+**/obj/
+**/bin/
 **/bin/*
 **/obj/*
