@@ -1,0 +1,11 @@
+D:\Users\Alexandra\Desktop\WORK\- Learn\C#\Library\Lib2\LibraryProjects\ShapeLibrary\bin\Debug\net7.0\ShapeLibrary.deps.json
+D:\Users\Alexandra\Desktop\WORK\- Learn\C#\Library\Lib2\LibraryProjects\ShapeLibrary\bin\Debug\net7.0\ShapeLibrary.dll
+D:\Users\Alexandra\Desktop\WORK\- Learn\C#\Library\Lib2\LibraryProjects\ShapeLibrary\bin\Debug\net7.0\ShapeLibrary.pdb
+D:\Users\Alexandra\Desktop\WORK\- Learn\C#\Library\Lib2\LibraryProjects\ShapeLibrary\obj\Debug\net7.0\ShapeLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Alexandra\Desktop\WORK\- Learn\C#\Library\Lib2\LibraryProjects\ShapeLibrary\obj\Debug\net7.0\ShapeLibrary.AssemblyInfoInputs.cache
+D:\Users\Alexandra\Desktop\WORK\- Learn\C#\Library\Lib2\LibraryProjects\ShapeLibrary\obj\Debug\net7.0\ShapeLibrary.AssemblyInfo.cs
+D:\Users\Alexandra\Desktop\WORK\- Learn\C#\Library\Lib2\LibraryProjects\ShapeLibrary\obj\Debug\net7.0\ShapeLibrary.csproj.CoreCompileInputs.cache
+D:\Users\Alexandra\Desktop\WORK\- Learn\C#\Library\Lib2\LibraryProjects\ShapeLibrary\obj\Debug\net7.0\ShapeLibrary.dll
+D:\Users\Alexandra\Desktop\WORK\- Learn\C#\Library\Lib2\LibraryProjects\ShapeLibrary\obj\Debug\net7.0\refint\ShapeLibrary.dll
+D:\Users\Alexandra\Desktop\WORK\- Learn\C#\Library\Lib2\LibraryProjects\ShapeLibrary\obj\Debug\net7.0\ShapeLibrary.pdb
+D:\Users\Alexandra\Desktop\WORK\- Learn\C#\Library\Lib2\LibraryProjects\ShapeLibrary\obj\Debug\net7.0\ref\ShapeLibrary.dll
