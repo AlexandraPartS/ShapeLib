@@ -436,11 +436,3 @@ $RECYCLE.BIN/
 .local-chromium/
 *.wt
 !vsoc.pfx
-
-# Ignore any files in /bin and /obj Folders
-*.obj
-*.bin
-**/obj/
-**/bin/
-**/bin/*
-**/obj/*
