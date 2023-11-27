@@ -31,7 +31,7 @@ namespace ShapeLibraryTest
 
             var triangle = new Triangle(valueside, valuebaseside);
 
-            Assert.Equal(expectedStyle, triangle.Style);
+            Assert.Equal(expectedStyle, triangle.Type);
         }
 
         //1.2 - parameterized constructor : style = "Equilateral"
@@ -43,7 +43,7 @@ namespace ShapeLibraryTest
 
             var triangle = new Triangle(valueside);
 
-            Assert.Equal(expectedStyle, triangle.Style);
+            Assert.Equal(expectedStyle, triangle.Type);
         }
 
         //3 - Throw Exception
@@ -71,7 +71,10 @@ namespace ShapeLibraryTest
             //Act
             var ex = Assert.Throws<ArgumentException>(() => new Triangle(value1, value2, value3));
             //Assert
-            Assert.Equal(string.Format("{0} {1} {2}", leadin, value3, exDesc), ex.Message);
+            Assert.Equal(string.Format("{0} {1} {2}", 
+                leadin, 
+                value3, 
+                exDesc), ex.Message);
         }
 
         //3.2 - Throw Exception : Message 
@@ -90,7 +93,9 @@ namespace ShapeLibraryTest
             //Act
             var ex = Assert.Throws<ArgumentException>(() => new Triangle(value1, value2, value3MorelimitValue));
             //Assert
-            Assert.Equal(string.Format("{0} {1}", leadin, exDesc), ex.Message);
+            Assert.Equal(string.Format("{0} {1}", 
+                leadin, 
+                exDesc), ex.Message);
         }
 
         //3.3 - Throw Exception : Message
@@ -108,7 +113,10 @@ namespace ShapeLibraryTest
 
             var ex = Assert.Throws<ArgumentException>(() => new Triangle(value1, value2, value3));
 
-            Assert.Equal(string.Format("{0} {1} {2}", leadin, expected, exDesc), ex.Message);
+            Assert.Equal(string.Format("{0} {1} {2}", 
+                leadin, 
+                expected, 
+                exDesc), ex.Message);
         }
 
 

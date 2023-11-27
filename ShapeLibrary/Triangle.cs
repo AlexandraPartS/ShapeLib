@@ -5,7 +5,7 @@ namespace ShapeLibrary
     public class Triangle : Shape
     {
         private double a, b, c;
-        public TriangleType Style { get; init; }
+        public TriangleType Type { get; init; }
 
         private double[] sortSides;
 
@@ -23,14 +23,14 @@ namespace ShapeLibrary
             {
                 CheckDimensions(side1);
                 a = b = c = side1;
-                Style = TriangleType.Equilateral;
+                Type = TriangleType.Equilateral;
             }
             else if(side3 == default)
             {
                 CheckDimensions(side1, side2);
                 a = b = side1;
                 c = side2;
-                Style = TriangleType.Isosceles;
+                Type = TriangleType.Isosceles;
             }
             else
             {
@@ -38,7 +38,7 @@ namespace ShapeLibrary
                 a = side1;
                 b = side2;
                 c = side3;
-                Style = TriangleType.Default;
+                Type = TriangleType.Default;
             }
 
             Area = CalcArea(a, b, c);
@@ -114,7 +114,7 @@ namespace ShapeLibrary
         }
 
         public override string GetInfo() => base.GetInfo() +
-                                    $"Style: {Style}\n" +
+                                    $"Style: {Type}\n" +
                                     $"Sides: {a}, {b}, {c}\n" +
                                     $"Area: {Area}\n";
 

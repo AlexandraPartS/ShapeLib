@@ -68,7 +68,7 @@ try
     Area: 0,4330127018922193
     */
 
-    Triangle tr5 = new Triangle(1) { Name = "Default triangle", Style = Triangle.TriangleType.Equilateral };
+    Triangle tr5 = new Triangle(1) { Name = "Default triangle", Type = Triangle.TriangleType.Equilateral };
     Console.WriteLine(tr5.GetInfo());
     /* Output:
     Shape: Default triangle
