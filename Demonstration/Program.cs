@@ -19,12 +19,12 @@ try
     Area: 3,141592653589793
     */
 
-    Circle c2 = new Circle(-1);
+    //Circle c2 = new Circle(-1);
     /* Output:
     Error: ArgumentException.Message:  -1 incorrect value. The value must be positive.
     */
 
-    Circle c3 = new Circle(Double.MaxValue);
+    //Circle c3 = new Circle(Double.MaxValue);
     /* Output:
     Error: ArgumentException. Message:  1,7976931348623157E+308 value exceed limit values. Limit is:  7,564545572282618E+153
      */
@@ -77,17 +77,17 @@ try
     Area: 0,4330127018922193
     */
 
-    Triangle tr1ex = new Triangle(3, 4, -5);
+    //Triangle tr1ex = new Triangle(3, 4, -5);
     /* Output:
     Error: ArgumentException.Message:  -5 incorrect value. The value must be positive.
     */
 
-    Triangle tr2ex = new Triangle(Double.MaxValue);
+    //Triangle tr2ex = new Triangle(Double.MaxValue);
     /* Output:
     Error: ArgumentException. Message:  one or more sides of Triangle are too large to calculate.
     */
 
-    Triangle tr3ex = new Triangle(1.7976931348623157E+100, 4, 3);
+    //Triangle tr3ex = new Triangle(1.7976931348623157E+100, 4, 3);
     /* Output:
     Error: ArgumentException. Message:  3 + 4 <= 1,7976931348623157E+100 value is more or equal than sum of the other two sides
     */
