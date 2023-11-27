@@ -5,12 +5,11 @@ namespace ShapeLibrary
     public class Triangle : Shape
     {
         private double a, b, c;
-        public TriangleStyle Style { get; init; }
-        public override double Area { get; }
+        public TriangleType Style { get; init; }
 
         private double[] sortSides;
 
-        public enum TriangleStyle
+        public enum TriangleType
         {
             Default,
             Isosceles,
@@ -24,16 +23,14 @@ namespace ShapeLibrary
             {
                 CheckDimensions(side1);
                 a = b = c = side1;
-                Style = TriangleStyle.Equilateral;
-                Area = CalcArea(a, b, c);
+                Style = TriangleType.Equilateral;
             }
             else if(side3 == default)
             {
                 CheckDimensions(side1, side2);
                 a = b = side1;
                 c = side2;
-                Style = TriangleStyle.Isosceles;
-                Area = CalcArea(a, b, c);
+                Style = TriangleType.Isosceles;
             }
             else
             {
@@ -41,15 +38,17 @@ namespace ShapeLibrary
                 a = side1;
                 b = side2;
                 c = side3;
-                Style = TriangleStyle.Default;
-                Area = CalcArea(a, b, c);
+                Style = TriangleType.Default;
             }
+
+            Area = CalcArea(a, b, c);
+
         }
 
         private void CheckDimensions(params double[] values)
         {
             DataValidation.CheckIsPositive(values);
-            DataValidation.CheckValuesTriangleForExcessWhenOp(values);
+            CheckValuesTriangleForExcessWhenOp(values);
             if(values.Length != 1)
             {
                 CheckSumOfTriangleSides(values);
@@ -78,7 +77,9 @@ namespace ShapeLibrary
             {
                 string mathexpression = $"{sortSides[0]} + {sortSides[1]} <= {sortSides[2]}";
                 throw new ArgumentException(string.Format("{0} {1} {2}",
-                                DataValidation.exDescList["leadin"], mathexpression, DataValidation.exDescList["_CorrectTriangleSidesSum"]));
+                                            DataValidation.exDescList["leadin"], 
+                                            mathexpression, 
+                                            DataValidation.exDescList["_CorrectTriangleSidesSum"]));
             }
         }
 
@@ -86,6 +87,30 @@ namespace ShapeLibrary
         {
             sortSides = new double[3]{ value1, value2, value3 };
             Array.Sort(sortSides);
+        }
+
+        private void CheckValuesTriangleForExcessWhenOp(params double[] values)
+        {
+            double p = 0;
+            if (values.Length == 1) { p = values[0] * 3 / 2; }
+            if (values.Length == 2) { p = (values[0] + values[0] + values[1]) / 2; }
+            if (values.Length == 3) { p = (values[0] + values[1] + values[2]) / 2; }
+            if (double.IsPositiveInfinity(p))
+            {
+                throw new ArgumentException(string.Format("{0} {1}", 
+                                            DataValidation.exDescList["leadin"], 
+                                            DataValidation.exDescList["_ExcessValueForTriangle"]));
+            }
+            else
+            {
+                for (int i = 1; i < 4; i++)
+                {
+                    if (double.IsPositiveInfinity(Math.Pow(p, i)))
+                        throw new ArgumentException(string.Format("{0} {1}", 
+                                                    DataValidation.exDescList["leadin"], 
+                                                    DataValidation.exDescList["_ExcessValueForTriangle"]));
+                }
+            }
         }
 
         public override string GetInfo() => base.GetInfo() +

@@ -68,7 +68,7 @@ try
     Area: 0,4330127018922193
     */
 
-    Triangle tr5 = new Triangle(1) { Name = "Default triangle", Style = Triangle.TriangleStyle.Equilateral };
+    Triangle tr5 = new Triangle(1) { Name = "Default triangle", Style = Triangle.TriangleType.Equilateral };
     Console.WriteLine(tr5.GetInfo());
     /* Output:
     Shape: Default triangle
@@ -160,7 +160,6 @@ class ColorTriangle : Triangle
 class Square : Shape
 {
     private double a;
-    public override double Area { get; }
 
     public Square(double value) : base("Square")
     {

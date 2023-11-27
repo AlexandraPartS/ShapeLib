@@ -25,7 +25,7 @@ namespace ShapeLibraryTest
         [Fact]
         public void Triangle_SetTwoSides_ReturnIsoscelesTriangle()
         {
-            var expectedStyle = Triangle.TriangleStyle.Isosceles;
+            var expectedStyle = Triangle.TriangleType.Isosceles;
             var valueside = 2.0;
             var valuebaseside = 1.0;
 
@@ -38,7 +38,7 @@ namespace ShapeLibraryTest
         [Fact]
         public void Triangle_SetTwoSides_ReturnEquilateralTriangle()
         {
-            var expectedStyle = Triangle.TriangleStyle.Equilateral;
+            var expectedStyle = Triangle.TriangleType.Equilateral;
             var valueside = 1.0;
 
             var triangle = new Triangle(valueside);

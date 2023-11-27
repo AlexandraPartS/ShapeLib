@@ -3,7 +3,6 @@
     public class Circle : Shape
     {
         private double r;
-        public override double Area { get; }
 
         public Circle(double radius) : base("Circle")
         {
@@ -15,7 +14,17 @@
         private void CheckDimensions(double value)
         {
             DataValidation.CheckIsPositive(value);
-            DataValidation.CheckValuesCircleForExcessWhenOp(value);
+            CheckValuesCircleForExcessWhenOp(value);
+        }
+
+        private void CheckValuesCircleForExcessWhenOp(double value)
+        {
+            if (value > DataValidation.UpperLimitValForDeg2)
+                throw new ArgumentException(string.Format("{0} {1} {2} {3}", 
+                                            DataValidation.exDescList["leadin"], 
+                                            value, 
+                                            DataValidation.exDescList["_ExcessValueForCircle"], 
+                                            DataValidation.UpperLimitValForDeg2));
         }
 
         public override string GetInfo() => base.GetInfo() +
