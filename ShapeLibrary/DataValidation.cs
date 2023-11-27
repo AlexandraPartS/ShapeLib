@@ -1,6 +1,10 @@
-﻿namespace ShapeLibrary
+﻿using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("ShapeLibraryTest")]
+//[assembly: InternalsVisibleTo("Demonstration")]
+
+namespace ShapeLibrary
 {
-    public class DataValidation
+    internal class DataValidation
     {
         public const double UpperLimitValForDeg2 = 7.564545572282618E+153; //Math.Sqrt((Double.MaxValue)/Math.PI)
 

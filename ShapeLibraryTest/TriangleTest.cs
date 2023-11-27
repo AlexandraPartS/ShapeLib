@@ -156,6 +156,5 @@ namespace ShapeLibraryTest
             Assert.False(isright);
         }
 
-
     }
 }
